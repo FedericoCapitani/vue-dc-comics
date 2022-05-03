@@ -26,10 +26,57 @@
                 </p>
             </div>
             <div class="shop-card">
-                <img src="@/assets/img/buy-dc-power-visa.svg" alt="dc power visa">
+                <img src="@/assets/img/buy-dc-power-visa.svg" alt="dc power visa" class="small-img">
                 <p>
-                    DC PWER VISA
+                    DC POWER VISA
                 </p>
+            </div>
+        </div>
+        <div class="info">
+            <div class="link-container">
+                <div class="comics">
+                    <h3>DC COMICS</h3>
+
+                    <p>Characters</p>
+                    <p>Comics</p>
+                    <p>Movies</p>
+                    <p>TV</p>
+                    <p>Games</p>
+                    <p>Videos</p>
+                    <p>News</p>
+
+                    <h3>SHOP</h3>
+
+                    <p>Shop DC</p>
+                    <p>Shop DC Collectibles</p>
+
+                </div>
+                <div class="DC">
+                    <h3>DC</h3>
+
+                    <p>Terms Of Use</p>
+                    <p>Privacy policy (New)</p>
+                    <p>Ad Choices</p>
+                    <p>Advertising</p>
+                    <p>Jobs</p>
+                    <p>Subscriptions</p>
+                    <p>Talent Workshops</p>
+                    <p>CPSC Certificates</p>
+                    <p>Ratings</p>
+                    <p>Shop Help</p>
+                    <p>Contact Us</p>
+                </div>
+                <div class="sites">
+                    <h3>SITES</h3>
+
+                    <p>DC</p>
+                    <p>MAD Magazines</p>
+                    <p>DC Kids</p>
+                    <p>DC Universe</p>
+                    <p>DC Power Visa</p>
+                </div>
+            </div>
+            <div class="container-img">
             </div>
         </div>
     </div>
@@ -47,8 +94,38 @@
         align-items: center;
         column-gap: 1rem;
     }
+    .shop-card img{
+        max-height: 70px;
+    }
     .shop-card p{
         color: white;
         font-weight: 700;
+    }
+    .small-img{
+        max-width: 60px;
+    }
+    .info{
+        background-image: url('@/assets/img/footer-bg.jpg');
+        background-size: cover;
+        padding: 3rem 15%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .link-container{
+        display: flex;
+        column-gap: 2rem;
+    }
+    .link-container h3{
+        color: white;
+        padding: 1rem 0;
+        font-size: 1.3rem;
+    }
+    .link-container p{
+        color: gray;
+        padding: 2px 0;
+    }
+    .container-img{
+        height: 100%;
+        background-image: url('@/assets/img/dc-logo-bg.png');
     }
 </style>
