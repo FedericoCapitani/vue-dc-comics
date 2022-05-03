@@ -77,6 +77,7 @@
                 </div>
             </div>
             <div class="container-img">
+                
             </div>
         </div>
         <div class="social">
@@ -120,13 +121,15 @@
     .info{
         background-image: url('@/assets/img/footer-bg.jpg');
         background-size: cover;
-        padding: 3rem 15%;
+        padding: 0 15%;
         display: flex;
         justify-content: space-between;
+        max-height: 500px;
     }
     .link-container{
         display: flex;
         column-gap: 2rem;
+        padding: 3rem 0;
     }
     .link-container h3{
         color: white;
@@ -138,8 +141,10 @@
         padding: 2px 0;
     }
     .container-img{
-        height: 100%;
+        height: 500px;
+        width: 560px;
         background-image: url('@/assets/img/dc-logo-bg.png');
+        background-position: center;
     }
     .social{
         background-color: #303030;
