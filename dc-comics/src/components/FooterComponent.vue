@@ -79,12 +79,25 @@
             <div class="container-img">
             </div>
         </div>
+        <div class="social">
+            <div class="sign-up">
+                SIGN UP NOW!
+            </div>
+            <div class="social-links">
+                <p>FOLLOW US</p>
+                <img src="@/assets/img/footer-facebook.png" alt="facebook icon">
+                <img src="@/assets/img/footer-twitter.png" alt="twitter icon">
+                <img src="@/assets/img/footer-youtube.png" alt="youtube icon">
+                <img src="@/assets/img/footer-pinterest.png" alt="pinterest icon">
+                <img src="@/assets/img/footer-periscope.png" alt="periscope icon">
+            </div>
+        </div>
     </div>
 </template>
 
 <style scoped>
     .shop{
-        background-color: blue;
+        background-color: #0282f9;
         display: flex;
         padding: 2rem 15%;
         justify-content: space-between;
@@ -127,5 +140,28 @@
     .container-img{
         height: 100%;
         background-image: url('@/assets/img/dc-logo-bg.png');
+    }
+    .social{
+        background-color: #303030;
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 15%;
+        align-items: center;
+    }
+    .sign-up{
+        padding: 1.5rem;
+        border: 2px solid #0282f9;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .social-links{
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+    .social-links p{
+        color: #0282f9;
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 </style>
