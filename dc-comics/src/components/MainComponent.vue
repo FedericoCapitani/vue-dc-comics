@@ -6,7 +6,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
     .main{
         min-height: 200px;
         background-color: black;
