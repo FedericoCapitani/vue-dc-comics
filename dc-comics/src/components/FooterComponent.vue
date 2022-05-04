@@ -10,42 +10,13 @@
         </div>
         <div class="info">
             <div class="link-container">
-                <div class="comics">
-                    <ul>
-                        <li v-for="item in linkgroups" :key="item.id">
-                            <a href="item.href"> {{item.links.text}} </a>
-                        </li>
-                    </ul>
-
-                    <h3>SHOP</h3>
-
-                    <p>Shop DC</p>
-                    <p>Shop DC Collectibles</p>
-
-                </div>
-                <div class="DC">
-                    <h3>DC</h3>
-
-                    <p>Terms Of Use</p>
-                    <p>Privacy policy (New)</p>
-                    <p>Ad Choices</p>
-                    <p>Advertising</p>
-                    <p>Jobs</p>
-                    <p>Subscriptions</p>
-                    <p>Talent Workshops</p>
-                    <p>CPSC Certificates</p>
-                    <p>Ratings</p>
-                    <p>Shop Help</p>
-                    <p>Contact Us</p>
-                </div>
-                <div class="sites">
-                    <h3>SITES</h3>
-
-                    <p>DC</p>
-                    <p>MAD Magazines</p>
-                    <p>DC Kids</p>
-                    <p>DC Universe</p>
-                    <p>DC Power Visa</p>
+                <div v-for="({title, links}, index) in linkgroups" :key="index">
+                    <h3> {{title}} </h3>
+                <ul>
+                    <li v-for="link in links" :key="link.id">
+                        <a href="link.href"> {{link.text}} </a>
+                    </li>
+                </ul>
                 </div>
             </div>
             <div class="container-img">
@@ -108,7 +79,7 @@
         padding: 1rem 0;
         font-size: 1.3rem;
     }
-    .link-container p{
+    .link-container a{
         color: gray;
         padding: 2px 0;
     }
@@ -177,7 +148,6 @@ export default {
             ],
             linkgroups: [
                 {
-                    id: 1,
                     title: 'DC COMICS',
                     links: [
                         {
@@ -218,7 +188,6 @@ export default {
                     ]
                 },
                 {
-                    id: 2,
                     title: 'SHOP',
                     links: [
                         {
@@ -234,7 +203,6 @@ export default {
                     ]
                 },
                 {
-                    id: 3,
                     title: 'DC ',
                     links: [
                         {
@@ -295,7 +263,6 @@ export default {
                     ]
                 },
                 {
-                    id: 4,
                     title: 'DC COMICS',
                     links: [
                         {
