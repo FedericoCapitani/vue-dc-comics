@@ -124,7 +124,7 @@
         padding: 0 15%;
         display: flex;
         justify-content: space-between;
-        max-height: 500px;
+        max-height: 450px;
     }
     .link-container{
         display: flex;
@@ -141,7 +141,7 @@
         padding: 2px 0;
     }
     .container-img{
-        height: 500px;
+        height: 450px;
         width: 560px;
         background-image: url('@/assets/img/dc-logo-bg.png');
         background-position: center;
