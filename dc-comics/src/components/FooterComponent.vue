@@ -11,15 +11,11 @@
         <div class="info">
             <div class="link-container">
                 <div class="comics">
-                    <h3>DC COMICS</h3>
-
-                    <p>Characters</p>
-                    <p>Comics</p>
-                    <p>Movies</p>
-                    <p>TV</p>
-                    <p>Games</p>
-                    <p>Videos</p>
-                    <p>News</p>
+                    <ul>
+                        <li v-for="item in linkgroups" :key="item.id">
+                            <a href="item.href"> {{item.links.text}} </a>
+                        </li>
+                    </ul>
 
                     <h3>SHOP</h3>
 
@@ -181,6 +177,7 @@ export default {
             ],
             linkgroups: [
                 {
+                    id: 1,
                     title: 'DC COMICS',
                     links: [
                         {
@@ -221,6 +218,7 @@ export default {
                     ]
                 },
                 {
+                    id: 2,
                     title: 'SHOP',
                     links: [
                         {
@@ -236,6 +234,7 @@ export default {
                     ]
                 },
                 {
+                    id: 3,
                     title: 'DC ',
                     links: [
                         {
@@ -296,6 +295,7 @@ export default {
                     ]
                 },
                 {
+                    id: 4,
                     title: 'DC COMICS',
                     links: [
                         {
