@@ -1,34 +1,10 @@
 <template>
     <div class="footer">
         <div class="shop">
-            <div class="shop-card">
-                <img src="@/assets/img/buy-comics-digital-comics.png" alt="digital comics shop">
+            <div class="shop-card" v-for="item in banner" :key="item.id">
+                <img :src="item.src" alt="digital comics shop" :class="item.id == 5 ? 'small-img': ''">
                 <p>
-                    DIGITAL COMICS
-                </p>
-            </div>
-            <div class="shop-card">
-                <img src="@/assets/img/buy-comics-merchandise.png" alt="merchandise shop">
-                <p>
-                    DC MERCHANDISE
-                </p>
-            </div>
-            <div class="shop-card">
-                <img src="@/assets/img/buy-comics-subscriptions.png" alt="subscriptions shop">
-                <p>
-                    SUBSCRIPTION
-                </p>
-            </div>
-            <div class="shop-card">
-                <img src="@/assets/img/buy-comics-shop-locator.png" alt="comics shop locator tool">
-                <p>
-                    COMIC SHOP LOCATOR
-                </p>
-            </div>
-            <div class="shop-card">
-                <img src="@/assets/img/buy-dc-power-visa.svg" alt="dc power visa" class="small-img">
-                <p>
-                    DC POWER VISA
+                    {{item.text}}
                 </p>
             </div>
         </div>
@@ -96,7 +72,7 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
     .shop{
         background-color: #0282f9;
         display: flex;
@@ -147,7 +123,7 @@
         background-position: center;
     }
     .social{
-        background-color: #303030;
+        background-color: $dc-footer;
         display: flex;
         justify-content: space-between;
         padding: 3rem 15%;
@@ -155,7 +131,7 @@
     }
     .sign-up{
         padding: 1.5rem;
-        border: 2px solid #0282f9;
+        border: 2px solid $dc-primary;
         color: white;
         font-size: 1.5rem;
     }
@@ -170,3 +146,189 @@
         font-weight: 700;
     }
 </style>
+
+<script>
+export default {
+    name: 'FooterComponent',
+    data(){
+        return {
+            banner: [
+                {
+                    id: 1,
+                    src: require('@/assets/img/buy-comics-digital-comics.png'),
+                    text: 'Digital Comics'
+                },
+                {
+                    id: 2,
+                    src: require('@/assets/img/buy-comics-merchandise.png'),
+                    text: 'DC Merchandise'
+                },
+                {
+                    id: 3,
+                    src: require('@/assets/img/buy-comics-subscriptions.png'),
+                    text: 'Subscritions'
+                },
+                {
+                    id: 4,
+                    src: require('@/assets/img/buy-comics-shop-locator.png'),
+                    text: 'Comics Shop Locator'
+                },
+                {
+                    id: 5,
+                    src: require('@/assets/img/buy-dc-power-visa.svg'),
+                    text: 'DC Power Visa'
+                }
+            ],
+            linkgroups: [
+                {
+                    title: 'DC COMICS',
+                    links: [
+                        {
+                            id: 1,
+                            href: '#',
+                            text: 'Characters'
+                        },
+                        {
+                            id: 2,
+                            href: '#',
+                            text: 'Comics'
+                        },
+                        {
+                            id: 3,
+                            href: '#',
+                            text: 'Movies'
+                        },
+                        {
+                            id: 4,
+                            href: '#',
+                            text: 'TV'
+                        },
+                        {
+                            id: 5,
+                            href: '#',
+                            text: 'Games'
+                        },
+                        {
+                            id: 6,
+                            href: '#',
+                            text: 'Videos'
+                        },
+                        {
+                            id: 7,
+                            href: '#',
+                            text: 'News'
+                        },
+                    ]
+                },
+                {
+                    title: 'SHOP',
+                    links: [
+                        {
+                            id: 1,
+                            href: '#',
+                            text: 'Shop DC'
+                        },
+                        {
+                            id: 2,
+                            href: '#',
+                            text: 'Shop DC Collectibles'
+                        }
+                    ]
+                },
+                {
+                    title: 'DC ',
+                    links: [
+                        {
+                            id: 1,
+                            href: '#',
+                            text: 'Terms Of Use'
+                        },
+                        {
+                            id: 2,
+                            href: '#',
+                            text: 'Privacy policy (New)'
+                        },
+                        {
+                            id: 3,
+                            href: '#',
+                            text: 'Ad Choices'
+                        },
+                        {
+                            id: 4,
+                            href: '#',
+                            text: 'Advertising'
+                        },
+                        {
+                            id: 5,
+                            href: '#',
+                            text: 'Jobs'
+                        },
+                        {
+                            id: 6,
+                            href: '#',
+                            text: 'Subscriptions'
+                        },
+                        {
+                            id: 7,
+                            href: '#',
+                            text: 'Talent Workshops'
+                        },
+                        {
+                            id: 8,
+                            href: '#',
+                            text: 'CPSC Certificates'
+                        },
+                        {
+                            id: 9,
+                            href: '#',
+                            text: 'Ratings'
+                        },
+                        {
+                            id: 10,
+                            href: '#',
+                            text: 'Shop Help'
+                        },
+                        {
+                            id: 11,
+                            href: '#',
+                            text: 'Contact Us'
+                        }
+                    ]
+                },
+                {
+                    title: 'DC COMICS',
+                    links: [
+                        {
+                            id: 1,
+                            href: '#',
+                            text: 'DC'
+                        },
+                        {
+                            id: 2,
+                            href: '#',
+                            text: 'MAD Magazines'
+                        },
+                        {
+                            id: 3,
+                            href: '#',
+                            text: 'DC Kids'
+                        },
+                        {
+                            id: 4,
+                            href: '#',
+                            text: 'DC Universe'
+                        },
+                        {
+                            id: 5,
+                            href: '#',
+                            text: 'DC PowerVisa'
+                        }
+                    ]
+                }
+
+
+            ]
+        }
+    }
+}
+</script>

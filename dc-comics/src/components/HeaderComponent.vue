@@ -11,7 +11,7 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
     .navbar{
         display: flex;
         justify-content: space-around;
@@ -24,7 +24,6 @@
     }
     .logo, .menu > a{
         padding: 1rem 0;
-        text-decoration: none;
     }
     .menu > a{
         display: flex;
@@ -34,8 +33,8 @@
         color: black;
     }
     a:hover{
-        color: #0282f9;
-        border-bottom: 5px solid #0282f9;
+        color: $dc-primary;
+        border-bottom: 5px solid $dc-primary;
         padding-top: calc(1rem + 5px);
     }
 </style>
