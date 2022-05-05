@@ -14,7 +14,7 @@
                     <h3> {{title}} </h3>
                 <ul>
                     <li v-for="link in links" :key="link.id">
-                        <a href="link.href"> {{link.text}} </a>
+                        <a :href="link.href"> {{link.text}} </a>
                     </li>
                 </ul>
                 </div>

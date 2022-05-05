@@ -5,7 +5,7 @@
                 <img src="@/assets/img/dc-logo.png" alt="Logo DC">
             </div>
             <div class="menu">
-                <a href="item.href" v-for="item in menu" :key="item.id"> {{item.text}} </a>
+                <a :href="item.href" v-for="item in menu" :key="item.id"> {{item.text}} </a>
             </div>
         </nav>
     </div>
